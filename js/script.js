@@ -170,8 +170,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Create invisible link and trigger download
   const link = document.createElement("a");
-  link.href = "AnkitKumar_Resume.pdf"; // Path to your PDF
-  link.download = "AnkitKumar_Resume.pdf"; // File name
+  link.href = "resume_ankit.pdf"; // Path to your PDF
+  link.download = "resume_ankit.pdf"; // File name
   document.body.appendChild(link);
   link.click();
   document.body.removeChild(link);
