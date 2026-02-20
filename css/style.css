@@ -600,38 +600,124 @@ body {
 }
 
 /* Mobile Responsive Hero */
+/* Mobile Responsive Hero */
 @media (max-width: 768px) {
+  /* Added: This forces the grid to stack and allows ordering */
+  .heroSection {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  /* Added: Move image to the top */
+  .heroVisual {
+    order: -1; 
+    margin-top: 0; /* Remove top margin */
+    margin-bottom: 20px; /* Add space between image and "Hi, I am" */
+  }
+  
+  /* Added: Ensure circle is a bit smaller for mobile screens */
+  .profileGlow {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Your existing code below... */
   .heroDescription {
-    font-size: 16px !important; /* 15px → 16px (better readability) */
-    line-height: 1.6; /* Better spacing */
-    max-width: 100% !important; /* Full width use */
-    padding: 0 20px; /* Side padding */
-    margin: 30px 0 40px !important; /* More bottom space */
+    font-size: 16px !important;
+    line-height: 1.6;
+    max-width: 100% !important;
+    padding: 0 20px;
+    margin: 30px 0 40px !important;
   }
 
   .ctaButton {
-    font-size: 16px !important; /* Bigger text */
-    padding: 18px 32px !important; /* Bigger touch target (48px min) */
-    min-height: 56px; /* Mobile standard */
-    width: 100%; /* Full width button */
-    max-width: 320px; /* Max width control */
-    margin: 0 auto 30px !important; /* Center + bottom space */
+    font-size: 16px !important;
+    padding: 18px 32px !important;
+    min-height: 56px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 30px !important;
     justify-content: center;
   }
 }
 
-/* Extra Small Mobile (480px below) */
+/* Mobile Responsive Hero (Tablets & Large Phones) */
+@media (max-width: 768px) {
+  .heroSection {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .heroVisual {
+    order: -1; 
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+
+  .profileGlow {
+    width: 300px;
+    height: 300px;
+  }
+
+  .profileImage {
+    top: 0;
+    left: 0; /* Keeps your face centered on mobile */
+  }
+
+  .heroDescription {
+    font-size: 16px !important;
+    line-height: 1.6;
+    max-width: 100% !important;
+    padding: 0 20px;
+    margin: 30px 0 40px !important;
+  }
+
+  .ctaButton {
+    font-size: 16px !important;
+    padding: 18px 32px !important;
+    min-height: 56px;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto 30px !important;
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile (480px and below) */
 @media (max-width: 480px) {
+  .heroSection {
+    padding: 40px 0; /* Slightly less padding to save screen space */
+  }
+
+  .heroTitle {
+    font-size: 48px; /* Shrinking title so it doesn't wrap weirdly */
+  }
+
+  .heroVisual {
+    margin-bottom: 15px;
+  }
+
+  .profileGlow {
+    width: 240px; /* Smaller image for small screens */
+    height: 240px;
+  }
+
   .heroDescription {
     font-size: 15px !important;
     padding: 0 15px;
-    margin: 25px 0 35px !important;
+    margin: 20px 0 30px !important;
   }
 
   .ctaButton {
     padding: 16px 28px !important;
     font-size: 15px !important;
     min-height: 52px;
+  }
+  
+  /* Hiding or shrinking tech icons if they clutter the small screen */
+  .techIcon {
+    font-size: 1.5rem;
+    padding: 8px;
   }
 }
 
