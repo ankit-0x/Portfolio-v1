@@ -45,7 +45,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // ----------------------------
   const typingText = document.getElementById("typingText");
   if (typingText) {
-    const phrases = ["Frontend Developer","B.Tech CSE Student","React Developer","UI/UX Developer","JavaScript Developer"];
+    const phrases = [
+  "Full Stack Developer",
+  "MERN Stack Developer",
+  "PERN Stack Developer",
+  "Backend Developer",
+  "React Developer",
+  "AI Application Developer",
+  "Software Engineer",
+  "B.Tech CSE Student"
+];
     let phraseIndex = 0, i = 0, deleting = false;
 
     const typeWriter = () => {

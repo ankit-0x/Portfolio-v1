@@ -771,6 +771,8 @@ body {
   gap: 18px;
 }
 
+
+
 /* Tablet */
 @media (min-width: 600px) {
   .skillsGrid {
